@@ -2,7 +2,7 @@
 - 👀 I’m interested in coding.
 - 🌱 I’m currently learning HTML And CSS
 - 💞️ I’m looking to collaborate on Programing
-- 📫 How to reach me on https://www.instagram.com/evode_mrtn/
+- 📫 Reach me on https://www.instagram.com/evode_mrtn/
 
 <!---
 Judamrtn/Judamrtn is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
