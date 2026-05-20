@@ -1,9 +1,4 @@
-👋 Hi, I’m Evode Tuyishime
-👀 I’m passionate about coding, networking, and backend development.
-🌱 I’m currently mastering PHP, PostgreSQL, and full-stack web development.
-💞️ I’m looking to collaborate on smart system projects, real-time apps, and APIs.
-📫 Reach me on https://www.instagram.com/___meevoz___/ or via email at evodemrtn@gmail.com
-
+IT professional with skills in software development, networking, and system support. Experienced in backend development and technical troubleshooting, with hands-on involvement in real-world IT projects. Interested in digital health systems and building practical technology solutions
 <!---
 Judamrtn/Judamrtn is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 You can click the Preview link to take a look at your changes.
