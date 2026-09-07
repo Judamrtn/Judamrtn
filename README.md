@@ -1,3 +1,9 @@
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dark_mode.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="light_mode.svg" />
+  <img alt="Judamrtn's GitHub profile" src="dark_mode.svg" />
+</picture>
+
 # 💫 About Me:
  Hi 👋, I'm Evode Tuyishime<br><br>Full-Stack Developer | Network Engineer | IoT Enthusiast<br><br>I build practical software solutions, from web applications and APIs to IoT systems. Passionate about creating scalable technology that solves real-world problems.
 

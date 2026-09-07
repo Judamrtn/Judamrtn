@@ -1,0 +1,50 @@
+# gh-ascii — daily card refresh
+#
+# Place this file in your profile repo (github.com/Judamrtn/Judamrtn) at:
+#   .github/workflows/refresh-card.yml
+#
+# Committed SVGs are a frozen snapshot: stars, followers, and uptime drift
+# out of date. This re-downloads both theme cards once a day and commits
+# them only when the card actually changed, so the numbers stay current.
+#
+# Heads-up: GitHub disables scheduled workflows after 60 days with no repo
+# activity, and emails the owner when that happens. Profile repos are quiet
+# by design, so this can bite you silently — if the card stops updating,
+# re-enable the workflow from the Actions tab (or just click "Run workflow"
+# there any time to check it's still alive).
+
+name: Refresh gh-ascii card
+
+on:
+  schedule:
+    # Daily at 06:17 UTC — off-the-hour times get scheduled more reliably;
+    # GitHub drops runs when everyone piles onto :00.
+    - cron: "17 6 * * *"
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Download latest cards
+        run: |
+          curl -fL "https://gh.crafter.run/Judamrtn?theme=dark"  -o dark_mode.svg
+          curl -fL "https://gh.crafter.run/Judamrtn?theme=light" -o light_mode.svg
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          if ! git diff --quiet -- dark_mode.svg light_mode.svg; then
+            git add dark_mode.svg light_mode.svg
+            git commit -m "chore: refresh gh-ascii card"
+            git push
+          else
+            echo "No changes — card is already up to date."
+          fi
